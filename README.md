@@ -1,0 +1,35 @@
+# Bank Soal — SQL & Python Practice Arena
+
+Aplikasi latihan soal (6 TEST: 3 SQL, 3 Python) yang berjalan penuh di browser.
+SQL memakai SQLite (sql.js), Python memakai Pyodide.
+
+## Cara pakai (Windows)
+
+1. Pastikan **Python** terpasang (centang *Add to PATH* saat install).
+2. Klik dua kali **`start.bat`**.
+3. Browser terbuka otomatis di `http://localhost:8000/Bank_soal.html`.
+
+Pertama kali, `start.bat` mengunduh Pyodide (~5 MB) ke folder `pyodide/`. Setelah itu tidak perlu internet untuk Python.
+
+> Jangan buka `Bank_soal.html` dengan klik dua kali (`file://`), Pyodide tidak bisa jalan dengan cara itu.
+
+## Cara pakai (Mac/Linux)
+
+```bash
+python3 -m http.server 8000
+# buka http://localhost:8000/Bank_soal.html
+```
+
+## Online via GitHub Pages
+
+Settings → Pages → Branch `main` / root. Lalu buka
+`https://<username>.github.io/<nama-repo>/Bank_soal.html`.
+Agar tidak bergantung CDN, commit folder `pyodide/` (hasil `start.bat`) ke repo.
+
+## Masalah umum
+
+| Masalah | Solusi |
+|---|---|
+| Gagal memuat Pyodide | Jalankan lewat `start.bat`, atau pakai VPN / ganti DNS ke 1.1.1.1 |
+| Python tidak menampilkan hasil | Tambahkan `print(...)` |
+| Tombol Jalankan tidak muncul di soal SQL | Soal itu tidak punya data contoh; cocokkan dengan Ekspektasi Output |
